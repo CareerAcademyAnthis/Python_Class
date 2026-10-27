@@ -28,7 +28,7 @@ def student_code():
 def test_oop_structure(student_code):
     """Verify that a student created classes for the assignment"""
     assert hasattr(student_code, "BowlingGame"), "Missing a main BowlingGame class"
-    assert hasattr(student_code, "frame"), "Missing a base Frame Class"
+    assert hasattr(student_code, "Frame"), "Missing a base Frame Class"
     #Verify that the created at least one subclass for special frame
     classes = [cls_name for cls_name in dir(student_code) if isinstance(getattr(student_code, cls_name), type)]
     assert len(classes) >= 3, f"Expected at least 3 classes (Game, Frame, Subclass), found: {classes}"
